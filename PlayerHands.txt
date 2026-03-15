@@ -1,0 +1,4 @@
+Player One's Hand: [D8 D2 H6 S4 H9 C10]
+Player Two's Hand: [H8 S5 S2 D12 C9 D6]
+Player Three's Hand: [H3 D4 S6 C8 C1 S13]
+Player Four's Hand: [C13 H1 S7 H13 H5 S8]
