@@ -4,3 +4,8 @@ I started making this back in the Spring of 2022 for my CS2 semester project. To
 While the project ended up in a fairly good place when I finished the class, I have always wanted to make it what I know it could be. So, I plan on irregularly continuing my work on this to improve the core mechanics and overall features. <br>
 Last, if you haven't ever played this game, give it a shot, it's awesome! <br>
 I look forward to seeing what this ends up becoming! 
+
+
+# Rules 
+[Official Game Rules (officialgamerules.org)](https://officialgamerules.org/game-rules/golf-card-game/)<br
+[Wikipedia](https://en.wikipedia.org/wiki/Golf_(card_game))
