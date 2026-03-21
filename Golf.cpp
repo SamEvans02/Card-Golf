@@ -1,50 +1,21 @@
 /* Program Information 
 Name: Sam Evans 
-Date Started: March 24, 2023 
-Date Finished: May 21, 2023  (Goal) 
+Original start: March 24, 2023 
+CS2 Semester Project finished: May 11, 2023 
+Picking back up: March 15, 2026 
+Finish: - 
 
-    This program is the Comprehensive Semester Project main file of Golf, a classic card game. 
-    The Golf game I've made is of Six-Card Golf is for two to six players. 
-
-
-    File Key: 
-        Comment Out When Done Coding (Coding Aids): 
-            //Comment out after done programming game 
-
-        Rules: 
-            //Clarify the specifics of this in the game introduction (class "Introduction") 
+This program is the continuation of my previous "Golf" program, which I made for a CS2 Semester Project Golf. 
+Golf, also known as "Turtle", is a classic card game where the objective is to get the lowest score by matching 
+cards in columns to eliminate points in your hand. 
+The Golf game I've made here is of Six-Card Golf and is for two to six players. 
 */
 
 
-#include <iostream>
-#include <string>
-#include <vector>
-#include <algorithm>
-#include <random>
-#include <chrono>
-#include <fstream>
-#include <map>
-#include <array>
-
-using namespace std;
+#include "Golf_Header.h"
 
 
-//Function Prototypes, Constants, and other Globals 
-const int playerDeckAmount = 6; //This is Six-Card Golf, won't do Four and Eight-Card Golf 
 
-void beginGame(); //Function Prototype 
-//void setDeckVector(vector<string> &); //Setter wouldn't work for what I want to do 
-vector<string> dealPlayerOne(vector<string> &, int &);
-vector<string> dealPlayerTwo(vector<string> &, int &);
-vector<string> dealPlayerThree(vector<string> &, int &);
-vector<string> dealPlayerFour(vector<string> &, int &);
-/*void dealPlayerFive(vector<string> &, int &);
-void dealPlayerSix(vector<string> &, int &);*/
-//void callClass(vector<string> &, int &);
-void game(int &);
-string stringifyPlayerNumber(int &);
-string stringifyCard(string &);
-string checkGameWin();
 
 
 
@@ -843,7 +814,7 @@ void game(int &numPlayers) {
     /*for (int i = 0; i < 20; i++) { //Test for remaining deck 
         cout << remainingDeck[i] << ' ';
     }*/
-    playerCards[1] = playerOneHand;
+    playerCards[1] = playerOneHand; //Begins at '1' because the map (value) is mapped to the key of '1', the first player and so on 
     vector<string> playerTwoHand = P.dealPlayerTwo(drawDeck, numPlayers);
     drawDeck = P.erasePlayerTwoCards(drawDeck, numPlayers);
     playerCards[2] = playerTwoHand;
@@ -858,7 +829,7 @@ void game(int &numPlayers) {
             playerCards[4] = playerFourHand;
         }
     }
-    //cout << "MAP: " << playerCards[1][0] << endl; //Testing printing out element of constructed map, it works! 
+    //cout << "MAP: " << playerCards[1][0] << endl; //Testing printing out element of constructed map; it works! 
 
 
 
@@ -947,12 +918,33 @@ void game(int &numPlayers) {
 
 
 
-
-        cout << endl << endl << endl << endl << "The Draw Deck: ??" << endl;
-        cout << endl << "The Discard Pile: " << stringifyCard(discardPile.back()) << endl;
+    
+        cout << endl << endl << endl << endl << "The Draw Deck: ??" << endl; //Visual representation of the random card choice 
+        cout << endl << "The Discard Pile: " << stringifyCard(discardPile.back()) << endl; //Visual representation of the discard choice 
         //cout << endl << "The showing discarded card is: " << stringifyCard(discardPile.back());
+        
+        //Prints out the current player's hand for quick reference 
+        if (playerTurnNumber == 1 || playerTurnNumber == 2) {
+            cout << endl << endl << endl << endl << "+---------------------+" << endl << "|  Player " << stringifyPlayerNumber(playerTurnNumber) << "'s Hand  |" << endl << "+---------------------+" << endl;
+        }
+        else if (playerTurnNumber == 3) {
+            cout << endl << endl << endl << endl << "+-----------------------+" << endl << "|  Player " << stringifyPlayerNumber(playerTurnNumber) << "'s Hand  |" << endl << "+-----------------------+" << endl;
+        }
+        else if (playerTurnNumber == 4) {
+            cout << endl << endl << endl << endl << "+----------------------+" << endl << "|  Player " << stringifyPlayerNumber(playerTurnNumber) << "'s Hand  |" << endl << "+----------------------+" << endl;
+        }
+        for (int k = 0; k < 6; k++) {
+            if (k == 2) {
+                cout << playerCards[playerTurnNumber][k] << endl;
+            }
+            else {
+                cout << playerCards[playerTurnNumber][k] << ' ';
+            }
+        }
         cout << endl << endl << endl << "Player " << stringifyPlayerNumber(playerTurnNumber) << "'s Turn: " << endl;
         
+
+
         playerTurnChoice = GM.playerMovePrompt();
 
         if (playerTurnChoice == 1) {

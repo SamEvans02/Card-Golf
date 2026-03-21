@@ -1,4 +1,20 @@
-Player One's Hand: [D8 D2 H6 S4 H9 C10]
-Player Two's Hand: [H8 S5 S2 D12 C9 D6]
-Player Three's Hand: [H3 D4 S6 C8 C1 S13]
-Player Four's Hand: [C13 H1 S7 H13 H5 S8]
+Player One's Hand: [C13 C11 H5 C9 0 H2]
+Player Two's Hand: [S1 D12 D6 S6 C3 C2]
+Player Three's Hand: [S11 C4 S8 D4 S4 S13]
+Player Four's Hand: [H11 C12 S5 H10 D5 C7]
+
+Player One's Hand: [C13 C11 H5 C9 0 H2]
+Player Two's Hand: [S1 D12 D6 S6 C3 C2]
+Player Three's Hand: [S11 C4 S8 D4 S4 S13]
+Player Four's Hand: [H11 C12 S5 H10 D5 C7]
+
+Player One's Hand: [C13 C11 H5 C9 0 H2]
+Player Two's Hand: [S1 D12 D6 S6 C3 C2]
+Player Three's Hand: [S11 C4 S8 D4 S4 S13]
+Player Four's Hand: [H11 C12 S5 H10 D5 C7]
+
+Player One's Hand: [C13 C11 H5 C9 0 H2]
+Player Two's Hand: [S1 D12 D6 S6 C3 C2]
+Player Three's Hand: [S11 C4 S8 D4 S4 S13]
+Player Four's Hand: [H11 C12 S5 H10 D5 C7]
+
